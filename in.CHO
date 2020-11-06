@@ -19,7 +19,7 @@ fix     3 all temp/berendsen 300.0 300.0 100.0
      zlo EDGE 300 0 0 0 zhi EDGE 300 0 0 -0.004 &
      units box
 
-variable v_pressdown equal vdisplace(zhi,-0.004)
+variable v_pressdown equal vdisplace(zhi+0.5,-0.004)
 #fix zwalls all wall/morse zlo EDGE zhi v_pressdown 1.0 1.0 1.0 2.5 units box
 fix zwalls all wall/reflect zlo EDGE zhi v_pressdown units box
 
