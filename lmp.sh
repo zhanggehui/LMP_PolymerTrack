@@ -12,7 +12,7 @@
 
 hosts=`scontrol show hostname $SLURM_JOB_NODELIST`; echo $hosts
 
-source /appsnew/source/lammps-7Aug19-intel2018mpi-add.sh
-export PATH=/appsnew/physapps/lammps/lammps-7Aug192/bin2/bin:$PATH
+#source /appsnew/source/lammps-7Aug19-intel2018mpi-add.sh
+#export PATH=/appsnew/physapps/lammps/lammps-7Aug192/bin2/bin:$PATH
 
 mpirun -np $SLURM_NTASKS lmp -in in.CHO
