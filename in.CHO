@@ -20,7 +20,7 @@ fix     3 all temp/berendsen 300.0 300.0 100.0
      units box
 
 variable pressdown equal vdisplace(zhi+0.5,-0.001)
-fix zwalls all wall/lj126 zlo EDGE zhi v_pressdown 23.2 1.0 1.0 2.5
+fix zwalls all wall/lj126 zlo EDGE 23.2 1.0 1.0 2.5 zhi v_pressdown 23.2 1.0 1.0 2.5 
 #fix zwalls all wall/reflect zlo EDGE zhi v_pressdown units box
 
 timestep	0.25
