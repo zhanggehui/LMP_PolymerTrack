@@ -1,7 +1,7 @@
 # REAX potential for CHO system
 
 units		real
-
+boundary    p p f
 atom_style	charge
 read_data	data.CHO
 
@@ -20,7 +20,8 @@ fix     3 all temp/berendsen 300.0 300.0 100.0
      units box
 
 variable v_pressdown equal vdisplace(zhi,-0.004)
-fix zwalls all wall/morse zlo EDGE zhi v_pressdown 1.0 1.0 1.0 2.5 units box
+#fix zwalls all wall/morse zlo EDGE zhi v_pressdown 1.0 1.0 1.0 2.5 units box
+fix zwalls all wall/reflect zlo EDGE zhi v_pressdown units box
 
 timestep	0.5
 dump		1 all atom 30 dump.reax.cho
