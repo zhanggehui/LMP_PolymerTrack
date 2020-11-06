@@ -1,11 +1,11 @@
 # LAMMPS data file written by OVITO Basic 3.3.1
 
-4828 atoms #4850
+4850 atoms 
 3 atom types
 
-0.0 51.26 xlo xhi
-0.0 51.32 ylo yhi
-0.0 51.3 zlo zhi
+0.0 55 xlo xhi
+0.0 55 ylo yhi
+0.0 55 zlo zhi
 
 Masses
 
