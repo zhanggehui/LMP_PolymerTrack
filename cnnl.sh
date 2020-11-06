@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -J lmp_%j
+#SBATCH -J lmp
 #SBATCH -p cn_nl
 #SBATCH -N 3
 #SBATCH -o 1.out
