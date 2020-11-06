@@ -11,5 +11,6 @@
 #SBATCH --exclusive
 
 hosts=`scontrol show hostname $SLURM_JOB_NODELIST`; echo $hosts
+
 source /appsnew/source/lammps-7Aug19-intel2018mpi-add.sh
 mpirun -np $SLURM_NTASKS lmp -in in.CHO
