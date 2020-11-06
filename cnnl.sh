@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #SBATCH -J lmp
 #SBATCH -p cn_nl
 #SBATCH -N 3
