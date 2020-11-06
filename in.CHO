@@ -16,13 +16,13 @@ velocity	all create 300 482748
 fix     2 all qeq/reax 1 0.0 10.0 1e-6 param.qeq
 fix     3 all temp/berendsen 300.0 300.0 100.0
 #fix zwalls all wall/reflect/stochastic maxwell 29839 &
-     zlo EDGE 300 0 0 0 zhi EDGE 300 0 0 -0.004 &
+     zlo EDGE 300 0 0 0 zhi EDGE 300 0 0 -0.001 &
      units box
 
 variable pressdown equal vdisplace(zhi+0.5,-0.004)
 #fix zwalls all wall/morse zlo EDGE zhi v_pressdown 1.0 1.0 1.0 2.5 units box
 fix zwalls all wall/reflect zlo EDGE zhi v_pressdown units box
 
-timestep	0.5
+timestep	0.25
 dump		1 all atom 30 dump.reax.cho
 run		    10000
