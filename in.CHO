@@ -25,4 +25,4 @@ fix zwalls all wall/lj126 zlo EDGE 1.0 1.0 2.5 zhi v_pressdown 1.0 1.0 2.5 units
 
 timestep	0.25
 dump		1 all atom 30 dump.reax.cho
-run		    10000
+run		    100000
