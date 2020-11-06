@@ -7,6 +7,7 @@ read_data	data.CHO
 
 pair_style	reax/c lmp_control
 pair_coeff	* * ffield.reax.cho C H O
+
 neighbor	2 bin
 neigh_modify	every 10 delay 0 check no
 
