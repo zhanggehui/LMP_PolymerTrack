@@ -14,13 +14,13 @@ neigh_modify	every 10 delay 0 check no
 #velocity	all create 300 482748 
 fix		1 all nve
 fix     2 all qeq/reax 1 0.0 10.0 1e-6 param.qeq
-fix     3 all temp/berendsen 300.0 300.0 100.0
+#fix     3 all temp/berendsen 300.0 300.0 100.0
 #fix zwalls all wall/reflect/stochastic maxwell 29839 &
      zlo EDGE 300 0 0 0 zhi EDGE 300 0 0 -0.001 &
      units box
 
-variable pressdown equal vdisplace(zhi+5,-0.01)
-fix zwalls all wall/lj126 zlo EDGE 1.0 1.0 2.5 zhi v_pressdown 1.0 1.0 2.5
+variable pressdown equal vdisplace(zhi,-0.01)
+fix zwalls all wall/lj126 zlo EDGE 1.0 1.0 2.5 zhi v_pressdown 100.0 1.0 2.5
 #fix zwalls all wall/reflect zlo EDGE zhi v_pressdown units box
 
 timestep	0.25
