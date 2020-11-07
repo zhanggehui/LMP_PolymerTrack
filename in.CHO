@@ -19,10 +19,10 @@ fix     2 all qeq/reax 1 0.0 10.0 1e-6 param.qeq
      zlo EDGE 300 0 0 0 zhi EDGE 300 0 0 -0.001 &
      units box
 
-variable pressdown equal vdisplace(zhi,-0.01)
+variable pressdown equal vdisplace(zhi,-0.001)
 fix zwalls all wall/lj126 zlo EDGE 1.0 1.0 2.5 zhi v_pressdown 100.0 1.0 2.5
 #fix zwalls all wall/reflect zlo EDGE zhi v_pressdown units box
 
-timestep	0.25
+timestep	0.5
 dump		1 all atom 30 dump.reax.cho
 run		    10000
