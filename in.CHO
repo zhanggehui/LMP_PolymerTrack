@@ -1,7 +1,7 @@
 # REAX potential for CHO system
 
 units		real
-boundary    p p s
+boundary    p p p
 atom_style	charge
 read_data	data.CHO
 
